@@ -1,0 +1,75 @@
+/*
+ ar style rtl
+*/
+#T-Panel {
+    direction: rtl !important;
+    border-left: 1px solid #ddd !important;
+    border-right: 0px !important;
+}
+.T-Side {
+    
+}
+#T-Panel .T-Side ul li.active span {
+    left: -10px !important;
+    right: inherit !important;
+    border-right: 10px solid #34495e !important;
+    border-left: inherit !important;
+}
+#T-Panel .T-Side ul li a i {
+    margin-left: 6px !important;
+    margin-right: 0px !important;
+}
+.T-Content {
+   padding-left: 0px !important;
+   padding-right: 200px;
+}
+#T-Panel .T-Content .contentNav .btn-save {
+    float: left !important;
+}
+#T-Panel .T-Content .contentNav .btn-reset {
+    float: right !important;
+}
+#T-Panel .T-Content .panel-block .block-head h2 {
+    float: right !important;
+}
+#T-Panel .T-Content .panel-block .block-head a {
+    float: left !important;
+}
+#T-Panel .T-Content .panel-block .block-body .panel-upload button {
+    float: left !important;
+    text-align: right !important;
+}
+#T-Panel .T-Content .panel-block .block-body .panel-upload button i {
+    margin-right: 2px !important;
+    margin-left: 4px !important;
+}
+#T-Panel .T-Content .panel-block .block-body .ui-spinner .ui-spinner-input {
+    direction: ltr !important;
+}
+#T-Panel .T-Content .panel-block .block-body label.select::before {
+    right: inherit !important;
+    left: 8px !important;
+}
+#T-Panel .T-Content .panel-block .block-body label.select::after {
+    right: inherit !important;
+    left: -6px !important;
+    border-bottom: 0px !important;
+    border-top: 1px solid #ccc !important;
+}
+#T-Panel .T-Content .panel-block .block-body .panel-slider .slider {
+    float: right !important;
+}
+#T-Panel .T-Content .panel-block .block-body .panel-slider input[type="text"] {
+    float: left !important;
+}
+#T-Panel .T-Content .panel-block .block-body .panel-upload a.img-remove {
+    left: inherit !important;
+    right: -20px;
+}
+#T-Panel .T-Side ul > li > a {
+    padding-left: 0px !important;
+    padding-right: 18px;
+}
+#T-Panel .T-Side ul > li .fa-angle-down, #T-Panel .T-Content .panel-block .block-head i {
+    float: left !important;
+}

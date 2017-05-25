@@ -1,0 +1,771 @@
+@charset "utf-8";
+/* Abdo Hamoud Css */
+@import "font-awesome.min.css";
+@import "icons/flaticon.css";
+@import "jquery-ui.min.css";
+@import "../js/mini-colors/minicolors.css";
+@font-face {
+    font-family: "AH_Flat";
+    src: url('fonts/js-flat/JF-Flat-regular.eot');
+    src: url('fonts/js-flat/JF-Flat-regular.eot?#iefix') format('embedded-opentype'), url('fonts/js-flat/JF-Flat-regular.svg#JF Flat Regular') format('svg'), url('fonts/js-flat/JF-Flat-regular.woff') format('woff'), url('fonts/js-flat/JF-Flat-regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+/* Template Code */
+#T-Panel {
+    background: #fefefe;
+    opacity: 0;
+    visibility: hidden;
+    direction: ltr;
+    width: 800px;
+    border: 1px solid #ddd;
+    border-left: 0px;
+    overflow: hidden;
+    position: relative;
+    margin: 20px auto;
+    font-family: 'tahoma';
+    border-radius: 3px 3px 3px 3px;
+    -moz-border-radius: 3px 3px 3px 3px;
+    -webkit-border-radius: 3px 3px 3px 3px;
+    -o-border-radius: 3px 3px 3px 3px;
+    -ms-border-radius: 3px 3px 3px 3px;
+}
+#T-Panel .T-Side {
+    background: #34495e;
+    width: 200px;
+    min-height: 600px;
+    position: absolute;
+    height: 100%;
+}
+#T-Panel .T-Side .sidenav {
+    margin: 0px;
+}
+#T-Panel .T-Side .sidenav.fixed {
+    position: fixed;
+    top: 32px;
+}
+#T-Panel .T-Side .logo {
+    background: #3e5974;
+    box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.35);
+    width: 200px;
+    height: 60px;
+    margin: 0px;
+    line-height: 60px;
+    text-align: center;
+    font-family: 'AH_Flat';
+}
+#T-Panel .T-Side .logo a {
+    color: #fff;
+    font-size: 45px;
+    font-weight: bold;
+    text-decoration: none;
+}
+#T-Panel .T-Side .logo a span {
+    color: #4cd6f8;
+}
+#T-Panel .T-Side ul {
+    margin: 0px;
+}
+#T-Panel .T-Side ul > li {
+    position: relative;
+}
+#T-Panel .T-Side ul > li > a {
+    font-family: 'tahoma';
+    font-size: 14px;
+    color: #fff;
+    border-bottom: 1px solid #2b3d50;
+    box-shadow: 0px 1px 0px #3f5973;
+    height: 40px;
+    display: block;
+    line-height: 40px;
+    padding-left: 10px;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    -webkit-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+    -ms-transition: all 0.2s ease-in-out;
+}
+#T-Panel .T-Side ul > li > a > i {
+    font-size: 15px;
+    margin-right: 3px;
+    transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    -webkit-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+    -ms-transition: all 0.2s ease-in-out;
+}
+#T-Panel .T-Side ul > li > a:hover {
+    color: #2feea4;
+}
+#T-Panel .T-Side ul > li > a:hover > i {
+    margin-right: 8px;
+}
+#T-Panel .T-Side ul li.active > a {
+    color: #2feea4;
+}
+#T-Panel .T-Side ul li.active > a > i {
+    margin-right: 3px;
+}
+#T-Panel .T-Side ul > li.active > span {
+    border-top: 10px solid transparent;
+    border-left: 10px solid #34495e;
+    border-bottom: 10px solid transparent;
+    position: absolute;
+    right: -9px;
+    top: 10px;
+}
+#T-Panel .T-Side ul > li .fa-angle-down {
+    float: right;
+    color: #eee;
+    margin: 13px;
+}
+#T-Panel .T-Side ul > li > ul {
+    background: #243341;
+    display: none;
+}
+#T-Panel .T-Side ul > li > ul > li > a {
+    height: 30px;
+    line-height: 27px;
+    border-bottom: 1px solid #141c24;
+    box-shadow: 0px 1px 0px #33485c;
+    text-decoration: none;
+}
+#T-Panel .T-Side ul > li.active > ul {
+    display: block;
+}
+#T-Panel .T-Content {
+    width: auto;
+    min-height: 500px;
+    padding-bottom: 20px;
+    padding-left: 200px;
+}
+#T-Panel .T-Content .contentNav {
+    background: #fff;
+    box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.2);
+    width: 600px;
+    display: block;
+    overflow: hidden;
+    height: 60px;
+}
+#T-Panel .T-Content .contentNav.fixed {
+    position: fixed;
+    top: 32px;
+    z-index: 150;
+}
+#T-Panel .T-Content .contentNav .btn-save {
+    background: #28d290;
+    border: 0px;
+    color: #fff;
+    font-size: 16px;
+    height: 40px;
+    display: block;
+    float: right;
+    padding: 0px 15px;
+    margin: 10px;
+    border-radius: 3px 3px 3px 3px;
+    -moz-border-radius: 3px 3px 3px 3px;
+    -webkit-border-radius: 3px 3px 3px 3px;
+    -o-border-radius: 3px 3px 3px 3px;
+    -ms-border-radius: 3px 3px 3px 3px;
+    transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    -webkit-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+    -ms-transition: all 0.2s ease-in-out;
+    cursor: pointer;
+}
+#T-Panel .T-Content .contentNav .btn-save:hover {
+    background: #1cb278;
+}
+#T-Panel .T-Content .contentNav .form-loading {
+    background: #fafafa url('../images/ajax-loader.gif') no-repeat center center;
+    border: 1px solid #ddd;
+    width: 40px;
+    height: 40px;
+    display: none;
+    margin: 10px auto 0px auto;
+    border-radius: 3px 3px 3px 3px;
+    -moz-border-radius: 3px 3px 3px 3px;
+    -webkit-border-radius: 3px 3px 3px 3px;
+    -o-border-radius: 3px 3px 3px 3px;
+    -ms-border-radius: 3px 3px 3px 3px;
+}
+#T-Panel .T-Content .contentNav .form-success {
+    background: #ddfbc2 url('../images/success.png') no-repeat center center;
+    border: 1px solid #acdf7e;
+    width: 45px;
+    height: 40px;
+    display: none;
+    margin: 10px auto 0px auto;
+    border-radius: 3px 3px 3px 3px;
+    -moz-border-radius: 3px 3px 3px 3px;
+    -webkit-border-radius: 3px 3px 3px 3px;
+    -o-border-radius: 3px 3px 3px 3px;
+    -ms-border-radius: 3px 3px 3px 3px;
+}
+#T-Panel .T-Content .contentNav .btn-reset {
+    background: #ec9320;
+    border: 0px;
+    color: #fff;
+    font-size: 16px;
+    height: 40px;
+    display: block;
+    float: left;
+    padding: 0px 15px;
+    margin: 10px;
+    border-radius: 3px 3px 3px 3px;
+    -moz-border-radius: 3px 3px 3px 3px;
+    -webkit-border-radius: 3px 3px 3px 3px;
+    -o-border-radius: 3px 3px 3px 3px;
+    -ms-border-radius: 3px 3px 3px 3px;
+    transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    -webkit-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+    -ms-transition: all 0.2s ease-in-out;
+    cursor: pointer;
+}
+#T-Panel .T-Content .contentNav .btn-reset:hover {
+    background: #d18018;
+}
+#T-Panel .T-Content .panel-tab {
+    display: none;
+}
+#T-Panel .T-Content .panel-block {
+    background: #fbfbfb;
+    border: 1px solid #ddd;
+    border-radius: 3px 3px 3px 3px;
+    -moz-border-radius: 3px 3px 3px 3px;
+    -webkit-border-radius: 3px 3px 3px 3px;
+    -o-border-radius: 3px 3px 3px 3px;
+    -ms-border-radius: 3px 3px 3px 3px;
+    margin: 20px 20px 0px 20px;
+}
+#T-Panel .T-Content .panel-block .block-head {
+    background: #f3f3f3;
+    border-bottom: 1px solid #ddd;
+    height: 40px;
+    overflow: hidden;
+    padding: 0px 9px;
+    cursor: pointer;
+}
+#T-Panel .T-Content .panel-block .block-head h2 {
+    color: #555;
+    text-transform: capitalize;
+    font-family: 'Arial';
+    font-weight: normal;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 10px;
+    float: left;
+}
+#T-Panel .T-Content .panel-block .block-head i {
+    width: 25px;
+    height: 20px;
+    display: block;
+    float: right;
+    margin: 6px 5px;
+    font-size: 25px;
+    color: #444;
+    line-height: 18px;
+    text-align: right;
+}
+#T-Panel .T-Content .panel-block .block-head i.fa-sort-up {
+    line-height: 38px;
+}
+#T-Panel .T-Content .panel-block .block-body {
+    padding: 15px;
+    display: none;
+}
+#T-Panel .T-Content .panel-block .block-body table {
+    table-layout: fixed;
+    width: 100%;
+}
+#T-Panel .T-Content .panel-block .block-body table tr td:nth-child(1) {
+    width: 26%;
+}
+#T-Panel .T-Content .panel-block .block-body table tr td {
+    padding: 5px 0px;
+    color: #666;
+}
+#T-Panel .T-Content .panel-block .block-body table tr td label:nth-child(1) {
+    cursor: default;
+    font-size: 13px;
+}
+#T-Panel .T-Content .panel-block .block-body input[type="text"] {
+    background: #fff;
+    border: 1px solid #ccc;
+    width: 100%;
+    height: 35px;
+    font-size: 15px;
+    color: #555;
+    padding: 0px 4px;
+    border-radius: 2px 2px 2px 2px;
+    -moz-border-radius: 2px 2px 2px 2px;
+    -webkit-border-radius: 2px 2px 2px 2px;
+    -o-border-radius: 2px 2px 2px 2px;
+    -ms-border-radius: 2px 2px 2px 2px;
+    transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    -webkit-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+    -ms-transition: all 0.2s ease-in-out;
+}
+#T-Panel .T-Content .panel-block .block-body input[type="text"]:hover {
+    border: 1px solid #aaa;
+}
+#T-Panel .T-Content .panel-block .block-body input[type="text"]:focus {
+    border-color: #64b8ff;
+    box-shadow: 0 1px 1px rgba(68, 149, 218, 0.025) inset, 0 0 4px rgba(68, 149, 218, 0.4);
+}
+#T-Panel .T-Content .panel-block .block-body .panel-upload {
+    margin-right: 0px;
+    position: relative;
+}
+#T-Panel .T-Content .panel-block .block-body .panel-upload input[type="text"] {
+    display: inline-block;
+    width: 76%;
+}
+#T-Panel .T-Content .panel-block .block-body .panel-upload button {
+    width: 20%;
+    height: 35px;
+    display: block;
+    background: #439fee;
+    border: 0px;
+    color: #fff;
+    font-size: 14px;
+    float: right;
+    text-align: left;
+    margin: 0px;
+    border-radius: 3px 3px 3px 3px;
+    -moz-border-radius: 3px 3px 3px 3px;
+    -webkit-border-radius: 3px 3px 3px 3px;
+    -o-border-radius: 3px 3px 3px 3px;
+    -ms-border-radius: 3px 3px 3px 3px;
+    transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    -webkit-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+    -ms-transition: all 0.2s ease-in-out;
+    cursor: pointer;
+}
+#T-Panel .T-Content .panel-block .block-body .panel-upload.single img {
+    background: #aaa;
+    max-width: 75%;
+    border: 4px solid #ddd;
+    margin-top: 10px;
+}
+#T-Panel .T-Content .panel-block .block-body .panel-upload.multiple img {
+    background: #aaa;
+    width: 84px;
+    height: 78px;
+    float: left;
+    border: 4px solid #ddd;
+    margin-top: 10px;
+    margin-right: 10px;
+}
+#T-Panel .T-Content .panel-block .block-body .panel-upload.single a.img-remove {
+    background: #e93434;
+    display: inline-block;
+    cursor: pointer;
+    color: #fff;
+    padding: 3px 8px 4px 8px;
+    border-radius: 3px;
+    position: relative;
+    left: -20px;
+}
+#T-Panel .T-Content .panel-block .block-body .panel-upload.multiple a.img-remove {
+    background: #e93434;
+    display: inline-block;
+    cursor: pointer;
+    color: #fff;
+    padding: 3px 8px 4px 8px;
+    border-radius: 3px;
+    margin-top: 10px;
+}
+#T-Panel .T-Content .panel-block .block-body .panel-upload a.img-remove:hover {
+    background: #bc1b1b;
+}
+#T-Panel .T-Content .panel-block .block-body .panel-upload button i {
+    margin-right: 4px;
+}
+#T-Panel .T-Content .panel-block .block-body .panel-upload button:hover {
+    background: #2f88d4;
+}
+#T-Panel .T-Content .panel-block .block-body .panel-icons {
+    margin-right: 0px;
+    position: relative;
+}
+#T-Panel .T-Content .panel-block .block-body .panel-icons input[type="text"] {
+    display: inline-block;
+    width: 66%;
+    padding-left: 36px;
+}
+#T-Panel .T-Content .panel-block .block-body .panel-icons button {
+    width: 30%;
+    height: 35px;
+    display: block;
+    background: #eee;
+    border: 1px solid #ccc !important;
+    color: #555;
+    font-size: 14px;
+    float: right;
+    text-align: left;
+    margin: 0px;
+    border-radius: 3px 3px 3px 3px;
+    -moz-border-radius: 3px 3px 3px 3px;
+    -webkit-border-radius: 3px 3px 3px 3px;
+    -o-border-radius: 3px 3px 3px 3px;
+    -ms-border-radius: 3px 3px 3px 3px;
+    transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    -webkit-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+    -ms-transition: all 0.2s ease-in-out;
+    cursor: pointer;
+}
+#T-Panel .T-Content .panel-block .block-body .panel-icons button i.fa-sort-down {
+    float: right;
+    position: relative;
+    top: -3px;
+    margin-right: 5px;
+    font-size: 18px;
+}
+#T-Panel .T-Content .panel-block .block-body .panel-icons button i.fa-times {
+    float: right;
+    position: relative;
+    top: 0px;
+    margin-right: 5px;
+    font-size: 18px;
+}
+#T-Panel .T-Content .panel-block .block-body .panel-icons div {
+    background: #fff;
+    border: 1px solid #ddd;
+    height: 180px;
+    overflow: auto;
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    display: none;
+}
+#T-Panel .T-Content .panel-block .block-body .panel-icons div h4 {
+    background: #fafafa;
+    border: 1px solid #ddd;
+    text-align: center;
+    padding: 8px 0px 8px 0px;
+    font-size: 15px;
+    margin-top: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+#T-Panel .T-Content .panel-block .block-body .panel-icons div h4:nth-of-type(2){
+    margin-bottom: 10px !important;
+}
+#T-Panel .T-Content .panel-block .block-body .panel-icons div li {
+    background: #fafafa;
+    border: 1px solid #ddd;
+    padding: 8px 10px;
+    margin: 2.5px;
+    font-size: 21px;
+    display: inline-block;
+    cursor: pointer;
+}
+#T-Panel .T-Content .panel-block .block-body .panel-icons div li:hover, #T-Panel .T-Content .panel-block .block-body .panel-icons div li.active {
+    background: #666;
+    border: 1px solid #666;
+    color: #fff;
+}
+#T-Panel .T-Content .panel-block .block-body .panel-icons span {
+    background: none;
+    width: 66%;
+    height: 36px;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    display: block;
+    line-height: 36px;
+    font-size: 18px;
+    z-index: 15;
+    text-indent: 11px;
+}
+#T-Panel .T-Content .panel-block .block-body .panel-slider {
+    margin-right: 0px;
+}
+#T-Panel .T-Content .panel-block .block-body .panel-slider input[type="text"] {
+    display: block;
+    width: 20%;
+    float: right;
+    text-align: center;
+}
+#T-Panel .T-Content .panel-block .block-body .panel-slider .slider {
+    width: 75.5%;
+    float: left;
+    margin-top: 14px;
+    border: 1px solid #c5c5c5;
+    border-radius: 2px 2px 2px 2px;
+    -moz-border-radius: 2px 2px 2px 2px;
+    -webkit-border-radius: 2px 2px 2px 2px;
+    -o-border-radius: 2px 2px 2px 2px;
+    -ms-border-radius: 2px 2px 2px 2px;
+}
+#T-Panel .T-Content .panel-block .block-body .panel-slider .slider .ui-slider-handle {
+    cursor: move;
+}
+#T-Panel .T-Content .panel-block .block-body textarea {
+    background: #fff;
+    border: 1px solid #ccc;
+    width: 100%;
+    height: 100px;
+    font-size: 15px;
+    color: #555;
+    padding: 0px 4px;
+    resize: vertical;
+    border-radius: 2px 2px 2px 2px;
+    -moz-border-radius: 2px 2px 2px 2px;
+    -webkit-border-radius: 2px 2px 2px 2px;
+    -o-border-radius: 2px 2px 2px 2px;
+    -ms-border-radius: 2px 2px 2px 2px;
+    transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    -webkit-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+    -ms-transition: all 0.2s ease-in-out;
+}
+#T-Panel .T-Content .panel-block .block-body textarea:hover {
+    border: 1px solid #aaa;
+}
+#T-Panel .T-Content .panel-block .block-body textarea:focus {
+    border-color: #64b8ff;
+    box-shadow: 0 1px 1px rgba(68, 149, 218, 0.025) inset, 0 0 4px rgba(68, 149, 218, 0.4);
+}
+@media screen and (-webkit-min-device-pixel-ratio: 0) {
+    #T-Panel .T-Content .panel-block .block-body label.select select {
+        padding-right: 18px;
+    }
+}
+#T-Panel .T-Content .panel-block .block-body label.select {
+    overflow: hidden;
+    position: relative;
+}
+#T-Panel .T-Content .panel-block .block-body label.select select {
+    width: 77%;
+    height: 40px;
+    padding: 0px 10px;
+    margin: 0;
+    border-radius: 2px 2px 2px 2px;
+    -moz-border-radius: 2px 2px 2px 2px;
+    -webkit-border-radius: 2px 2px 2px 2px;
+    -o-border-radius: 2px 2px 2px 2px;
+    -ms-border-radius: 2px 2px 2px 2px;
+    border: 1px solid #ccc;
+    background: #fff;
+    color: #888;
+    outline: none;
+    display: inline-block;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    -webkit-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+    -ms-transition: all 0.2s ease-in-out;
+}
+#T-Panel .T-Content .panel-block .block-body label.select select:hover {
+    border: 1px solid #aaa;
+}
+#T-Panel .T-Content .panel-block .block-body label.select select:focus {
+    border-color: #64b8ff;
+    box-shadow: 0 1px 1px rgba(68, 149, 218, 0.025) inset, 0 0 4px rgba(68, 149, 218, 0.4);
+}
+#T-Panel .T-Content .panel-block .block-body label.select select option {
+    padding: 4px 0px 4px 9px;
+}
+#T-Panel .T-Content .panel-block .block-body label.select:after {
+    background: #f5f5f5;
+    width: 38px;
+    height: 19px;
+    line-height: 35px;
+    text-align: center;
+    content: '<>';
+    font: 15px "Consolas", monospace;
+    color: #888;
+    -webkit-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    transform: rotate(90deg);
+    right: -6px;
+    top: -2px;
+    padding: 0 0 2px;
+    border-bottom: 1px solid #ccc;
+    position: absolute;
+    pointer-events: none;
+}
+#T-Panel .T-Content .panel-block .block-body label.select:before {
+    content: '';
+    right: 6px;
+    top: 0px;
+    width: 20px;
+    height: 20px;
+    background: #fff;
+    position: absolute;
+    pointer-events: none;
+    display: block;
+}
+#T-Panel .T-Content .panel-block .block-body label.select:hover:after {
+    border-color: #aaa;
+}
+#T-Panel .T-Content .panel-block .block-body .ui-spinner {
+    border: 1px solid #ccc;
+    border-radius: 2px 2px 2px 2px;
+    -moz-border-radius: 2px 2px 2px 2px;
+    -webkit-border-radius: 2px 2px 2px 2px;
+    -o-border-radius: 2px 2px 2px 2px;
+    -ms-border-radius: 2px 2px 2px 2px;
+    width: 100px;
+    height: 33px;
+    margin: 0px;
+}
+#T-Panel .T-Content .panel-block .block-body .ui-spinner .ui-spinner-input {
+    padding: 8px !important;
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    display: block;
+}
+#T-Panel .T-Content .panel-block .block-body .ui-spinner a {
+    cursor: pointer;
+}
+#T-Panel .T-Content .panel-block .block-body .panel-checkbox {
+    margin: 0px;
+    background: url('images/checkbox.png') no-repeat right top;
+    left: 0px;
+    top: 0px;
+    width: 69px;
+    height: 29px;
+    display: block;
+    cursor: pointer !important;
+    transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    -webkit-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+    -ms-transition: all 0.2s ease-in-out;
+}
+#T-Panel .T-Content .panel-block .block-body .panel-checkbox input {
+    position: relative;
+    opacity: 0;
+    cursor: pointer !important;
+}
+#T-Panel .T-Content .panel-block .block-body .panel-checkbox.checked {
+    background: url('images/checkbox.png') no-repeat left top;
+}
+#T-Panel .T-Content .panel-block .block-body .panel-radio {
+    margin: 0px;
+    background: url('images/radio.png') no-repeat left top;
+    left: 0px;
+    top: 0px;
+    width: 23px;
+    height: 23px;
+    display: inline-block;
+    cursor: pointer !important;
+}
+#T-Panel .T-Content .panel-block .block-body .panel-radio input {
+    position: relative;
+    opacity: 0;
+    cursor: pointer !important;
+}
+#T-Panel .T-Content .panel-block .block-body .panel-radio.checked {
+    background: url('images/radio.png') no-repeat right top;
+}
+#T-Panel .T-Content .panel-block .block-body .panel-radio ~ span {
+    display: inline-block;
+    position: relative;
+    cursor: pointer !important;
+    top: 1px;
+}
+#T-Panel .T-Content .panel-block .block-body .panel-radio ~ span label {
+    cursor: pointer !important;
+}
+#T-Panel .T-Content .panel-block .block-body .panel-color {
+    margin: 0px 0px 0px -10px;
+}
+#T-Panel .T-Content .panel-block .block-body .panel-color a {
+    background: #fff;
+    border: 4px solid #ccc;
+    width: 35px;
+    height: 35px;
+    display: inline-block;
+    margin-right: 9px;
+    cursor: pointer;
+}
+#T-Panel .T-Content .panel-block .block-body .panel-color a.active {
+    border-color: #3397cb;
+}
+#T-Panel .T-Content .panel-block .block-body .panel-photos {
+    overflow: hidden;
+}
+#T-Panel .T-Content .panel-block .block-body .categories-checkbox-list {
+    background: #fff;
+    border: 1px solid #ddd;
+    padding: 15px;
+    overflow: hidden;
+}
+#T-Panel .T-Content .panel-block .block-body .categories-checkbox-list h4 {
+    margin: -15px -15px 15px -15px;
+    padding: 7.5px 15px 10px 15px;
+    border-bottom: 1px solid #ddd;
+    background: #f5f5f5;
+    font-size: 15px;
+}
+#T-Panel .T-Content .panel-block .block-body .categories-checkbox-list h4 a.checked-all {
+    font-size: 13px;
+    font-weight: 300;
+    float: right;
+    cursor: pointer;
+}
+#T-Panel .T-Content .panel-block .block-body .categories-checkbox-list ul {
+    display: block;
+    max-height: 115px;
+    overflow: auto;
+}
+#T-Panel .T-Content .panel-block .block-body .categories-checkbox-list li {
+    padding-bottom: 5px;
+    margin: 0px 0px;
+}
+#T-Panel .T-Content .panel-block .block-body .categories-checkbox-list li label {
+    display: inline-block;
+    overflow: hidden;
+    cursor: pointer !important;
+    overflow: hidden;
+}
+#T-Panel .T-Content .panel-block .block-body .tbale_blocks {
+    background: #eee;
+    border: 1px solid #d5d5d5;
+    padding: 12px;
+    display: none;
+    margin-top: 12px;
+}
+#T-Panel .T-Content .panel-block .block-body .tbale_blocks .panel-upload button {
+    width: 24%;
+}
+#T-Panel .T-Content .panel-block .block-body .tbale_blocks .panel-upload input[type="text"], #T-Panel .T-Content .panel-block .block-body .tbale_blocks label.select select {
+    width: 71%;
+}
+@media only screen and (max-width: 1200px) {
+    /*    #T-Panel {
+            width: 1000px;
+        }
+        .T-Content {
+            width: 750px;
+        }*/
+}
+@media only screen and (max-width: 1024px) {
+    /*    #T-Panel {
+            width: 800px;
+        }
+        .T-Content {
+            width: 550px;
+        }*/
+}
